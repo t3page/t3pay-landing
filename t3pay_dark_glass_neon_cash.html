@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050b18" />
+  <title>T3PAY — Telegram Group</title>
+  <meta name="robots" content="noindex,follow" />
+  <style>
+:root{--bg:#f6f8fb;--card:#fff;--text:#111827;--muted:#667085;--blue:#229ed9;--line:#e6eaf0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}a{text-decoration:none;color:inherit}.wrap{max-width:720px;margin:auto;padding:0 18px}header{padding:22px 0}.nav{display:flex;justify-content:center;align-items:center}.brand-mark{font-size:30px;font-weight:900;letter-spacing:-1.5px}.brand-mark span{color:var(--blue)}.tag,.secure{display:none}.hero{min-height:auto;display:block;text-align:center;padding:55px 0 32px}.eyebrow{font-size:12px;font-weight:800;letter-spacing:1.5px;color:var(--blue);text-transform:uppercase;margin-bottom:12px}h1{font-size:clamp(38px,10vw,58px);line-height:1;letter-spacing:-2.5px;margin:0 0 18px}h1 .accent{display:block;color:var(--blue)}.lead{font-size:17px;line-height:1.5;color:var(--muted);max-width:520px;margin:0 auto 26px}.hero-cta{display:flex;flex-direction:column;align-items:center;gap:10px}.btn,.telegram-btn{display:inline-flex;align-items:center;justify-content:center;width:min(100%,520px);min-height:58px;padding:0 24px;border-radius:14px;background:var(--blue);color:#fff;font-size:18px;font-weight:850;box-shadow:0 8px 22px rgba(34,158,217,.22)}.btn:hover,.telegram-btn:hover{transform:translateY(-1px)}.small-note{font-size:12px;color:#98a2b3}.phone-wrap{display:none}.section{padding:28px 0 10px}.section-title{font-size:26px;text-align:center;margin:0 0 18px}.section-title span{color:var(--blue)}.features{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.card{padding:18px 14px;border:1px solid var(--line);background:var(--card);border-radius:14px;text-align:center}.icon{font-size:25px;margin-bottom:8px}.card h3{font-size:13px;margin:0 0 6px}.card p{font-size:12px;line-height:1.45;color:var(--muted);margin:0}.community{margin:28px 0;padding:20px;border:1px solid var(--line);background:var(--card);border-radius:16px;text-align:center}.megaphone{font-size:32px}.community h2{font-size:22px;line-height:1.15;margin:8px 0}.community h2 span{color:var(--blue)}.community p{font-size:14px;line-height:1.45;color:var(--muted);margin:0}.join{text-align:center;padding:28px 0 36px}.join h2{font-size:28px;margin:0 0 8px}.join p{font-size:14px;color:var(--muted);margin:0 0 18px}.telegram-btn{font-size:20px}.telegram-btn:after{content:""}footer{padding:18px 0 28px}.footer-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;color:#98a2b3;font-size:11px;border-top:1px solid var(--line);padding-top:18px}.footer-row span{font-size:11px}@media(max-width:480px){.wrap{padding:0 14px}.hero{padding-top:40px}.features{grid-template-columns:1fr 1fr}.card{padding:15px 10px}.card p{font-size:11px}}
+
+/* --- T3PAY dark animated background --- */
+:root{
+  --bg:#07111f;
+  --bg2:#0a1728;
+  --panel:rgba(12,28,48,.78);
+  --panel2:rgba(17,39,65,.78);
+  --line:rgba(80,177,255,.24);
+  --blue:#168cff;
+  --blue2:#63caff;
+  --text:#f3f8ff;
+  --muted:#aebed1;
+}
+body{
+  background:
+    radial-gradient(circle at 15% 20%,rgba(22,140,255,.16),transparent 28%),
+    radial-gradient(circle at 85% 70%,rgba(34,110,255,.12),transparent 30%),
+    linear-gradient(135deg,#050b14 0%,#081525 48%,#050b14 100%);
+  position:relative;
+}
+body:before{
+  content:"";
+  position:fixed;
+  inset:-20%;
+  z-index:-2;
+  pointer-events:none;
+  opacity:.5;
+  background:
+    radial-gradient(circle at 20% 30%,rgba(60,175,255,.16) 0 2px,transparent 3px),
+    radial-gradient(circle at 70% 65%,rgba(60,175,255,.12) 0 2px,transparent 3px),
+    radial-gradient(circle at 45% 80%,rgba(80,130,255,.10) 0 1px,transparent 3px);
+  background-size:240px 240px,310px 310px,190px 190px;
+  animation:t3drift 28s linear infinite;
+}
+body:after{
+  content:"";
+  position:fixed;
+  width:55vw;
+  height:55vw;
+  max-width:720px;
+  max-height:720px;
+  min-width:320px;
+  min-height:320px;
+  left:-15vw;
+  top:8vh;
+  z-index:-1;
+  pointer-events:none;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(22,140,255,.13),rgba(22,140,255,.04) 35%,transparent 68%);
+  filter:blur(8px);
+  animation:t3float 18s ease-in-out infinite alternate;
+}
+@keyframes t3drift{
+  from{transform:translate3d(0,0,0) rotate(0deg)}
+  to{transform:translate3d(80px,-55px,0) rotate(8deg)}
+}
+@keyframes t3float{
+  from{transform:translate3d(0,0,0) scale(1)}
+  to{transform:translate3d(18vw,12vh,0) scale(1.12)}
+}
+@media (prefers-reduced-motion:reduce){
+  body:before,body:after{animation:none}
+}
+
+
+/* --- Dark Glass / Neon theme --- */
+body{
+  background:
+    radial-gradient(circle at 12% 8%,rgba(0,183,255,.13),transparent 30%),
+    radial-gradient(circle at 88% 72%,rgba(91,61,255,.11),transparent 32%),
+    linear-gradient(135deg,#03070d 0%,#07111d 46%,#040911 100%);
+}
+.card{
+  background:
+    linear-gradient(145deg,rgba(18,34,52,.78),rgba(5,13,23,.88)),
+    linear-gradient(180deg,rgba(50,180,255,.05),transparent);
+  border:1px solid rgba(96,190,255,.25);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.06),
+    inset 0 0 28px rgba(0,145,255,.035),
+    0 18px 45px rgba(0,0,0,.38);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+}
+.card:hover{
+  border-color:rgba(90,201,255,.48);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.08),
+    0 18px 50px rgba(0,0,0,.46),
+    0 0 28px rgba(0,151,255,.09);
+  transform:translateY(-3px);
+}
+.card h3{
+  color:#8bd8ff;
+  text-shadow:0 0 14px rgba(80,196,255,.16);
+}
+.card p{
+  color:#b9c9d9;
+}
+.icon{
+  text-shadow:0 0 18px rgba(70,194,255,.3);
+}
+.section-title{
+  color:#f3f8ff;
+  text-shadow:0 0 25px rgba(80,190,255,.08);
+}
+.section-title span{
+  color:#70d3ff;
+  text-shadow:0 0 20px rgba(53,187,255,.25);
+}
+.community{
+  background:linear-gradient(145deg,rgba(15,38,61,.78),rgba(4,12,22,.91));
+  border-color:rgba(83,195,255,.28);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+}
+
+
+/* --- Subtle flying cash background animation --- */
+.cash-rain{
+  position:fixed;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:0;
+}
+.cash{
+  position:absolute;
+  top:-90px;
+  left:var(--x);
+  width:var(--size);
+  height:calc(var(--size) * .48);
+  opacity:0;
+  border-radius:6px;
+  background:
+    linear-gradient(135deg,rgba(71,210,145,.85),rgba(22,126,85,.75));
+  border:1px solid rgba(168,255,210,.45);
+  box-shadow:0 0 12px rgba(46,220,145,.12);
+  transform:rotate(var(--r));
+  animation:cashFall var(--duration) linear var(--delay) infinite;
+}
+.cash:before{
+  content:"$";
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  color:rgba(220,255,235,.8);
+  font-size:calc(var(--size) * .42);
+  font-weight:900;
+  text-shadow:0 0 8px rgba(200,255,225,.25);
+}
+@keyframes cashFall{
+  0%{
+    opacity:0;
+    transform:translate3d(0,-90px,0) rotate(var(--r)) rotateY(0deg);
+  }
+  8%{opacity:var(--opacity)}
+  50%{
+    transform:translate3d(var(--drift),55vh,0) rotate(calc(var(--r) + 180deg)) rotateY(160deg);
+  }
+  92%{opacity:var(--opacity)}
+  100%{
+    opacity:0;
+    transform:translate3d(calc(var(--drift) * -1),115vh,0) rotate(calc(var(--r) + 360deg)) rotateY(360deg);
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  .cash{animation:none;display:none}
+}
+
+</style>
+</head>
+<body>
+<div class="cash-rain" aria-hidden="true">
+<span class="cash" style="--x:7%;--size:28px;--r:-12deg;--opacity:0.45;--duration:16s;--delay:-4s;--drift:48px;"></span>
+<span class="cash" style="--x:16%;--size:34px;--r:18deg;--opacity:0.32;--duration:20s;--delay:-11s;--drift:-38px;"></span>
+<span class="cash" style="--x:27%;--size:25px;--r:-25deg;--opacity:0.38;--duration:17s;--delay:-8s;--drift:55px;"></span>
+<span class="cash" style="--x:39%;--size:31px;--r:9deg;--opacity:0.28;--duration:23s;--delay:-17s;--drift:-45px;"></span>
+<span class="cash" style="--x:51%;--size:27px;--r:-14deg;--opacity:0.36;--duration:19s;--delay:-3s;--drift:34px;"></span>
+<span class="cash" style="--x:63%;--size:35px;--r:22deg;--opacity:0.30;--duration:22s;--delay:-13s;--drift:-58px;"></span>
+<span class="cash" style="--x:74%;--size:24px;--r:-8deg;--opacity:0.40;--duration:18s;--delay:-6s;--drift:42px;"></span>
+<span class="cash" style="--x:86%;--size:30px;--r:15deg;--opacity:0.30;--duration:21s;--delay:-16s;--drift:-30px;"></span>
+<span class="cash" style="--x:94%;--size:26px;--r:-20deg;--opacity:0.34;--duration:24s;--delay:-9s;--drift:52px;"></span>
+</div>
+  <header class="wrap">
+    <nav class="nav">
+      <a class="brand" href="#">
+        <div>
+          <div class="brand-mark">T3<span>PAY</span></div>
+          <div class="tag">Earn Together • Grow Together</div>
+        </div>
+      </a>
+      <div class="secure">✓ Secure Community</div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">T3PAY Community</div>
+        <h1>JOIN T3PAY.<span class="accent">GET UPDATES.</span></h1>
+        <p class="lead">Join the T3PAY community for updates, offers and announcements.</p>
+        <div class="hero-cta">
+          <a class="btn" href="https://t.me/t3payagent" target="_blank" rel="noopener noreferrer">✈ &nbsp;JOIN TELEGRAM GROUP</a>
+          <span class="small-note">Tap to join the official T3PAY Telegram community</span>
+        </div>
+      </div>
+
+      <div class="phone-wrap" aria-hidden="true">
+        <div class="orb"></div>
+        <div class="phone">
+          <div class="notch"></div>
+          <div class="screen">
+            <div class="screen-head"><span>T3PAY</span><span>◉</span></div>
+            <div class="balance"><small>Wallet Balance</small><strong>₹ 25,680.50</strong></div>
+            <div class="grid">
+              <div class="mini"><b>＋</b>Add Money</div>
+              <div class="mini"><b>⇄</b>Send Money</div>
+              <div class="mini"><b>◈</b>History</div>
+              <div class="mini"><b>▣</b>Passbook</div>
+              <div class="mini"><b>▯</b>Mobile</div>
+              <div class="mini"><b>◢</b>DTH</div>
+              <div class="mini"><b>♧</b>Electricity</div>
+              <div class="mini"><b>•••</b>More</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">WHY <span>T3PAY?</span></h2>
+      <div class="features">
+        <article class="card"><div class="icon">₹</div><h3>REWARDS</h3><p>Earn rewards on eligible UPI transactions and activity.</p></article>
+        <article class="card"><div class="icon">🎁</div><h3>EASY EARNING</h3><p>Explore earning opportunities with a simple community-first approach.</p></article>
+        <article class="card"><div class="icon">🚀</div><h3>STARTUP FUNDS</h3><p>Get information about available support and opportunities through the community.</p></article>
+        <article class="card"><div class="icon">👥</div><h3>STRONG COMMUNITY</h3><p>Learn, grow and stay connected with other members.</p></article>
+      </div>
+    </section>
+
+    <section class="community">
+      <div class="megaphone">📣</div>
+      <div>
+        <h2>JOIN THE <span>COMMUNITY</span></h2>
+        <p>Get updates, announcements and community news.</p>
+      </div>
+    </section>
+
+    <section class="join" id="join">
+      <h2>JOIN T3PAY</h2>
+      <p>Tap below to join the Telegram group.</p>
+      <a class="telegram-btn" href="https://t.me/t3payagent" target="_blank" rel="noopener noreferrer">✈ &nbsp;JOIN TELEGRAM GROUP</a>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <div class="footer-row">
+      <span>⚡ Fast Transactions</span>
+      <span>🛡 Secure & Reliable</span>
+      <span>🎧 Community Support</span>
+    </div>
+  </footer>
+</body>
+</html>
