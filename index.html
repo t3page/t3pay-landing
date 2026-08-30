@@ -233,12 +233,15 @@ h1 span {
   transform: translateY(-1px) scale(0.99);
 }
 
-.cta svg {
+.cta-img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 
-.cta:hover svg {
-  transform: translateX(4px);
+.cta:hover .cta-img {
+  transform: scale(1.15) rotate(-6deg);
 }
 
 /* Feature Cards Grid */
@@ -391,8 +394,8 @@ footer a:hover {
     <p class="lead">Access community announcements, digital tools, service information and member updates in one dedicated hub.</p>
     <div class="cta-wrapper">
       <a class="cta" href="https://t.me/t3payagent" target="_blank" rel="noopener noreferrer">
+        <img src="telegram-logo.png" alt="Telegram" class="cta-img">
         Join Now
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
       </a>
     </div>
   </section>
@@ -408,7 +411,7 @@ footer a:hover {
 
     <article class="card">
       <div class="icon-wrapper">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
       </div>
       <h2>COMMUNITY NETWORK</h2>
       <p>Connect with the global T3PAY network, share insights, and get instant access to community events.</p>
