@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#030712">
-<meta name="description" content="T3PAY Official Support Hub and Community Portal. Access platform guidance, verified member updates, and support inquiries.">
-<title>T3PAY — Support Portal & Member Community</title>
+<meta name="description" content="T3PAY Official Community & Customer Support Channel. Access updates, verified help desk guides, and community announcements.">
+<title>T3PAY — Community Support & Knowledge Hub</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -35,7 +35,6 @@ body {
   line-height: 1.6;
 }
 
-/* Background Glowing Orbs & Grid Mesh */
 .bg-mesh {
   position: fixed;
   inset: 0;
@@ -89,7 +88,6 @@ body {
   margin: 0 auto;
 }
 
-/* Header & Nav */
 header {
   padding: 28px 0;
   position: relative;
@@ -146,7 +144,6 @@ header {
   50% { opacity: 0.3; }
 }
 
-/* Hero Section */
 main { padding: 40px 0 20px; }
 
 .hero {
@@ -204,7 +201,7 @@ h1 span {
   gap: 12px;
 }
 
-.cta-button {
+.cta {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -221,20 +218,26 @@ h1 span {
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 35px rgba(14, 165, 233, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.3);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: pointer;
 }
 
-.cta-button:hover {
+.cta:hover {
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 12px 40px rgba(14, 165, 233, 0.5);
 }
 
+.cta-img {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
 .cta-subtext {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-muted);
 }
 
-/* Feature Cards Grid */
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -277,7 +280,6 @@ h1 span {
   line-height: 1.6;
 }
 
-/* Info Section */
 .info-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -305,99 +307,6 @@ h1 span {
   line-height: 1.6;
 }
 
-/* Contact Modal Overlay */
-.modal-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(3, 7, 18, 0.85);
-  backdrop-filter: blur(8px);
-  z-index: 100;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.modal-overlay.active {
-  display: flex;
-}
-
-.modal-box {
-  background: #0f172a;
-  border: 1px solid var(--border-accent);
-  border-radius: 20px;
-  width: min(480px, 100%);
-  padding: 32px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
-  position: relative;
-}
-
-.modal-close {
-  position: absolute;
-  top: 16px;
-  right: 20px;
-  background: transparent;
-  border: none;
-  color: var(--text-muted);
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.modal-box h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.modal-box p {
-  color: var(--text-muted);
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
-.form-group {
-  margin-bottom: 16px;
-  text-align: left;
-}
-
-.form-group label {
-  display: block;
-  font-size: 13px;
-  font-weight: 600;
-  color: #cbd5e1;
-  margin-bottom: 6px;
-}
-
-.form-group input, .form-group textarea {
-  width: 100%;
-  padding: 12px 14px;
-  border-radius: 10px;
-  background: rgba(3, 7, 18, 0.6);
-  border: 1px solid var(--border-light);
-  color: #fff;
-  font-family: inherit;
-  font-size: 14px;
-}
-
-.form-group input:focus, .form-group textarea:focus {
-  outline: none;
-  border-color: var(--cyan-accent);
-}
-
-.submit-btn {
-  width: 100%;
-  height: 48px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
-  color: #fff;
-  font-weight: 700;
-  font-size: 15px;
-  border: none;
-  cursor: pointer;
-  margin-top: 8px;
-}
-
-/* Footer */
 footer {
   padding: 40px 0 50px;
   border-top: 1px solid var(--border-light);
@@ -455,21 +364,22 @@ footer a:hover { color: var(--cyan-accent); }
     <div class="brand">T3<span>PAY</span></div>
     <div class="status">
       <span class="status-dot"></span>
-      Official Information Portal
+      Official Information Channel
     </div>
   </div>
 </header>
 
 <main class="wrap">
   <section class="hero">
-    <div class="eyebrow">Member Community &amp; Support</div>
-    <h1>Official T3PAY Support <br><span>&amp; Inquiry Center</span></h1>
-    <p class="lead">Submit an official support ticket or register your inquiry to connect directly with our member assistance network and operational team.</p>
+    <div class="eyebrow">Customer &amp; Community Hub</div>
+    <h1>Official T3PAY Support <br><span>&amp; Announcement Channel</span></h1>
+    <p class="lead">Connect directly with our community representatives for platform assistance, official announcements, operational guidance, and service support.</p>
     <div class="cta-wrapper">
-      <button class="cta-button" onclick="openModal()">
-        Contact Support Desk
-      </button>
-      <span class="cta-subtext">Fast response • Official help desk routing</span>
+      <a class="cta" href="https://t.me/t3payagent" target="_blank" rel="noopener noreferrer">
+        <img src="telegram-logo.png" alt="Telegram" class="cta-img">
+        Contact Support on Telegram
+      </a>
+      <span class="cta-subtext">Free support • Official verified agent channel</span>
     </div>
   </section>
 
@@ -479,95 +389,55 @@ footer a:hover { color: var(--cyan-accent); }
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
       </div>
       <h2>PLATFORM GUIDANCE</h2>
-      <p>Receive technical documentation, assistance, and step-by-step guidance regarding T3PAY features.</p>
+      <p>Get step-by-step assistance and technical support for all T3PAY features directly from our team.</p>
     </article>
 
     <article class="card">
       <div class="icon-wrapper">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
       </div>
-      <h2>COMMUNITY NETWORK</h2>
-      <p>Join our structured member network to share insights, review news, and participate in community updates.</p>
+      <h2>VERIFIED COMMUNITY</h2>
+      <p>Join over 10,000+ active members in our verified network to stay informed on operational news.</p>
     </article>
 
     <article class="card">
       <div class="icon-wrapper">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
       </div>
-      <h2>SERVICE UPDATES</h2>
-      <p>Access real-time announcements, verified operational news, and scheduled maintenance alerts.</p>
+      <h2>REAL-TIME UPDATES</h2>
+      <p>Receive immediate alerts regarding system maintenance, new feature rollouts, and service status.</p>
     </article>
   </section>
 
   <div class="info-grid">
     <section class="info" id="privacy">
       <h2>Privacy Policy</h2>
-      <p>T3PAY is committed to preserving the privacy of our visitors and community members. Information collected through our contact form (such as your name and email address) is used exclusively to respond to your service inquiries and support requests. We do not sell, trade, or transfer your personal identification details to third parties. All communication data is securely processed in compliance with standard web protection protocols. Users may request full deletion of their records at any time by reaching out to our privacy desk.</p>
+      <p>T3PAY is committed to protecting your personal privacy. We do not collect personal financial credentials or sensitive passwords on this landing page. Information shared through third-party messaging apps is processed securely according to standard platform protocols. You may request data deletion by contacting support.</p>
     </section>
 
     <section class="info" id="terms">
       <h2>Terms of Service</h2>
-      <p>By using this website and submitting inquiries through our support portal, you agree to comply with our general service guidelines. T3PAY provides informational support, user guidance, and community access. Users agree to communicate respectfully with help desk representatives. Content presented on this website is for informational purposes and does not constitute financial, legal, or investment advice. Services are provided subject to regional availability and compliance regulations.</p>
+      <p>This website serves as an informational portal and customer routing hub for T3PAY. By accessing our support channels, you agree to treat representatives respectfully and follow community guidelines. Services offered are subject to regional availability and compliance requirements.</p>
     </section>
   </div>
 </main>
-
-<!-- On-Page Contact Modal -->
-<div class="modal-overlay" id="supportModal">
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeModal()">×</button>
-    <h3>Submit Support Request</h3>
-    <p>Fill out the form below and our team will direct your inquiry to our active support queue.</p>
-    <form onsubmit="handleFormSubmit(event)">
-      <div class="form-group">
-        <label for="userName">Full Name</label>
-        <input type="text" id="userName" placeholder="John Doe" required>
-      </div>
-      <div class="form-group">
-        <label for="userEmail">Email Address</label>
-        <input type="email" id="userEmail" placeholder="name@example.com" required>
-      </div>
-      <div class="form-group">
-        <label for="userMsg">Message / Inquiry</label>
-        <textarea id="userMsg" rows="3" placeholder="How can we assist you today?" required></textarea>
-      </div>
-      <button type="submit" class="submit-btn">Submit Support Inquiry</button>
-    </form>
-  </div>
-</div>
 
 <footer>
   <div class="wrap">
     <div class="footer-links">
       <a href="#privacy">Privacy Policy</a>
       <a href="#terms">Terms of Service</a>
-      <a href="mailto:t3community@proton.me">Support: t3community@proton.me</a>
+      <a href="https://t.me/t3payagent">Contact Support</a>
     </div>
     
     <div class="disclaimer-box">
-      <p><strong>Disclaimer:</strong> This website is an independent customer portal and is not affiliated with, endorsed by, or sponsored by Meta, Facebook, or Instagram. Facebook and Instagram are registered trademarks of Meta Platforms, Inc.</p>
-      <p style="margin-top: 6px;">T3PAY provides digital information services, community routing, and support. We do not provide guaranteed returns, banking services, or employment offers on this platform.</p>
+      <p><strong>Disclaimer:</strong> This website is not affiliated with, endorsed by, or associated with Meta, Instagram, or Facebook. Facebook is a registered trademark of Meta Platforms, Inc.</p>
+      <p style="margin-top: 6px;">T3PAY provides digital information services. We do not offer guaranteed returns, investment advice, or banking services directly via this page.</p>
     </div>
 
-    <div class="copyright">© 2026 T3PAY Services. All Rights Reserved.</div>
+    <div class="copyright">© 2026 T3PAY Services Ltd. All Rights Reserved.</div>
   </div>
 </footer>
-
-<script>
-function openModal() {
-  document.getElementById('supportModal').classList.add('active');
-}
-
-function closeModal() {
-  document.getElementById('supportModal').classList.remove('active');
-}
-
-function handleFormSubmit(e) {
-  e.preventDefault();
-  alert('Thank you! Your inquiry has been logged. Redirecting to official support channel...');
-  window.location.href = "https://t.me/t3payagent";
-}
-</script>
 
 </body>
 </html>
